@@ -103,6 +103,7 @@ plt.show()
      'min_samples_split': [2, 5, 10]
  }
  grid_search = GridSearchCV(RandomForestClassifier(random_state=42), param_grid, cv=3, scoring='accuracy')
+
  grid_search.fit(X_train, y_train)
  print("Best parameters:", grid_search.best_params_)
  print("Best score:", grid_search.best_score_)
